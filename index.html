@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html lang = "ru">
+<head>
+   <meta charset="utf-8">
+   <title>Laba1</title>
+   <link rel="stylesheet" href="main.css">
+</head>
+<body>  
+   <div class="header"> 
+      <em>
+         <p style="color: purple">Байрамова Хумай</p>
+         <p style="color: purple">Вариант №2802</p>
+         <p style="color: purple">Группа №P3132</p>
+      </em>
+   </div>
+
+
+   <div class="centerBorder">
+     <form class="validateForm" action="server.php" method="GET">
+      <div class="commonGroup">
+         <div class="fillItPls">Заполните тут все, позязя</div>
+         <div class="XR">
+            <div class="chooseX"> 
+               <label class="chooseXTitle"><p>Выберите X</p></label>
+               <label><input type="radio" id="-3" name="chooseX" value="-3">-3</label>
+               <label><input type="radio" id="-2" name="chooseX" value="-2">-2</label>
+               <br>
+               <label><input type="radio" id="-1" name="chooseX" value="-1">-1</label>
+               <label><input type="radio" id="0" name="chooseX" value="0"> 0</label>
+               <br>
+               <label><input type="radio" id="1" name="chooseX" value="1"> 1</label>
+               <label><input type="radio" id="2" name="chooseX" value="2"> 2</label> 
+               <br>
+               <label><input type="radio" id="3" name="chooseX" value="3"> 3</label>
+               <label><input type="radio" id="4" name="chooseX" value="4"> 4</label> 
+               <br>
+               <label><input type="radio" id="5" name="chooseX" value="5"> 5</label>
+
+            </div>
+
+            <div class="selectR"> 
+               <select class="selectRInner" name="selectR">
+                  <option selected="Выберите R" disabled="Выберите R">Выберите R</option>
+                  <option name="selectR" value="1" >1</option>
+                  <option name="selectR" value="1.5" >1.5</option>
+                  <option name="selectR" value="2" >2</option>
+                  <option name="selectR" value="2.5" >2.5</option>
+                  <option name="selectR" value="3">3</option>
+               </select>
+            </div>
+         </div>
+
+         <div class="enterY">
+            <input class="enterYInner" name="enterY" type="text" placeholder="Введите значение Y от -3 до 5">
+         </div>
+
+         <div class="button">
+            <input class="butt" type="submit" name="sendButton" value="Отправить">
+         </div>
+
+      </div>
+   </form>
+
+   <div class="svg">
+      <svg width="300" height="300" class="svg-graph">
+
+       <!--            Линии оси-->
+
+       <line class="axis" x1="0" x2="300" y1="150" y2="150" stroke="black"></line>
+       <line class="axis" x1="150" x2="150" y1="0" y2="300" stroke="black"></line>
+       <polygon points="150,0 144,15 156,15" stroke="black"></polygon>
+       <polygon points="300,150 285,156 285,144" stroke="black"></polygon>
+
+       <line class="coor-line" x1="200" x2="200" y1="155" y2="145" stroke="black"></line>
+       <line class="coor-line" x1="250" x2="250" y1="155" y2="145" stroke="black"></line>
+
+       <line class="coor-line" x1="50"  x2="50"  y1="155" y2="145" stroke="black"></line>
+       <line class="coor-line" x1="100" x2="100" y1="155" y2="145" stroke="black"></line>
+
+       <line class="coor-line" x1="145" x2="155" y1="100" y2="100" stroke="black"></line>
+       <line class="coor-line" x1="145" x2="155" y1="50"  y2="50"  stroke="black"></line>
+
+       <line class="coor-line" x1="145" x2="155" y1="200" y2="200" stroke="black"></line>
+       <line class="coor-line" x1="145" x2="155" y1="250" y2="250" stroke="black"></line>
+
+       <text class="coor-text" x="195" y="140">R/2</text>
+       <text class="coor-text" x="248" y="140">R</text>
+
+       <text class="coor-text" x="40" y="140">-R</text>
+       <text class="coor-text" x="90" y="140">-R/2</text>
+
+       <text class="coor-text" x="160" y="105">R/2</text>
+       <text class="coor-text" x="160" y="55">R</text>
+
+       <text class="coor-text" x="160" y="205">-R/2</text>
+       <text class="coor-text" x="160" y="255">-R</text>
+
+       <text class="axis-text" x="290" y="170">X</text>
+       <text class="axis-text" x="160" y="13">Y</text>
+
+       <!-- first figure-->
+       <polygon class="rectangle-figure" points="100,150 100,50 150,50, 150,150"
+       fill="blue"  fill-opacity="0.7"  stroke="blue"></polygon>
+
+       <!-- second figure-->
+       <polygon class="triangle-figure" points="150,150 150,50 200,150"
+       fill="blue" fill-opacity="0.7" stroke="blue"></polygon>
+
+       <!-- third figure-->
+       <path class="circle-figure" d="M 200 150 A 50 50, 180, 0, 1, 150 200 L 150 150 Z"
+       fill="blue" fill-opacity="0.7" stroke="blue"></path>
+
+       <circle r="0" cx="150" cy="150" id="target-dot"></circle>
+
+    </svg>
+
+      <script src="validation.js"></script>
+
+ </div>
+</div>
+
+
+
+</body>
+</html>
